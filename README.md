@@ -17,6 +17,8 @@ App Component:
 * Render same table Component with prop data=data2
 * Work on any object, here's a skeleton that you should make work:
 
+
+
     let data2 = [
        {"rank":1,"name":"China","population":1373420000,"percent":18.9},
        {"rank":2,"name":"India","population":1280670000,"percent":17.6},

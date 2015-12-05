@@ -2,13 +2,6 @@ import React from "react";
 import TableHeader from "./tableHeader";
 import TableBody from "./tableBody";
 
-// headers = headers.map( key => { 
-//   return <th> {key} </th>
-// })
-
-// let headers = Object.keys(data[0][0])
-// console.log('table keys from TableHeader ', headers);
-
 class Table extends React.Component {
   render() {
     return (
@@ -21,9 +14,6 @@ class Table extends React.Component {
         </div>
       </div>
     );
-  }
-  componentDidMount() {
-    console.log('table props ', this.props.data)
   }
 }
 

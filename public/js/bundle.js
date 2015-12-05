@@ -63,8 +63,6 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	// import data from "./data";
-	
 	_reactDom2.default.render(_react2.default.createElement(_app2.default, null), document.getElementById('react'));
 
 /***/ },
@@ -20319,13 +20317,6 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	// headers = headers.map( key => {
-	//   return <th> {key} </th>
-	// })
-	
-	// let headers = Object.keys(data[0][0])
-	// console.log('table keys from TableHeader ', headers);
-	
 	var Table = (function (_React$Component) {
 	  _inherits(Table, _React$Component);
 	
@@ -20352,11 +20343,6 @@
 	          )
 	        )
 	      );
-	    }
-	  }, {
-	    key: "componentDidMount",
-	    value: function componentDidMount() {
-	      console.log('table props ', this.props.data);
 	    }
 	  }]);
 	
@@ -20391,10 +20377,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	// import data from "../data";
-	
-	// let headers;
 	
 	var TableHeader = (function (_React$Component) {
 	  _inherits(TableHeader, _React$Component);
@@ -20434,20 +20416,6 @@
 	})(_react2.default.Component);
 	
 	exports.default = TableHeader;
-	
-	// class TableHeaders extends React.Component{
-	//   render(){
-	//     let data = this.props.data;
-	//     var heads = Object.keys(data[0]);
-	//     var headers = ""
-	//     console.log(heads.length)
-	//     for(var i = 0; i < heads.length; i++){
-	//       console.log(heads[i])
-	//       headers = headers.concat("<th>{heads[i]}</th>");
-	//     }
-	//     return(headers)
-	//   }
-	// }
 
 /***/ },
 /* 163 */
@@ -20476,10 +20444,6 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	// import data from "../data";
-	
-	// console.log('data from TableBody ', data);
-	
 	var TableBody = (function (_React$Component) {
 	  _inherits(TableBody, _React$Component);
 	
@@ -20496,7 +20460,6 @@
 	      var rows = this.props.data;
 	      rows = rows.map(function (row, idx) {
 	        var values = keys.map(function (key, idx) {
-	          console.log('key', key);
 	          return _react2.default.createElement(
 	            "td",
 	            { key: idx },

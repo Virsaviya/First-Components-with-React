@@ -17,11 +17,11 @@ App Component:
 * Render same table Component with prop data=data2
 * Work on any object, here's a skeleton that you should make work:
 
-```let data1 = [
-  {"domain":"mongodb.info","ip":"82.192.74.35","country":"NL"},
-  {"domain":"udemy.com","ip":"190.93.242.22","country":"CR"},  
-  {"domain":"coursereport.com","ip":"204.236.232.83","country":"US"}}
-];```
+    let data1 = [
+      {"domain":"mongodb.info","ip":"82.192.74.35","country":"NL"},
+      {"domain":"udemy.com","ip":"190.93.242.22","country":"CR"},  
+      {"domain":"coursereport.com","ip":"204.236.232.83","country":"US"}}
+    ];
 
     let data2 = [
        {"rank":1,"name":"China","population":1373420000,"percent":18.9},

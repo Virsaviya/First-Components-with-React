@@ -3,32 +3,27 @@ import data from "../data";
 import Table from "./table";
 
 
+let tables = data
+tables = tables.map( (table, idx) => { 
+  return (
+    <div>
+      <h3>Table {idx + 1}</h3>
+      <Table key={idx} data={table}/>
+    </div>
+  )
+})
+
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    // this.props.data = data;
-// console.log('data from your apppp ', this.props.data);
-  }
   render() {
     return (
       <div className="row">
         <div className="col-md-12">
         <h2>Dynamically Building Tables with React.js</h2>
-        <Table data={data} />
+        {tables}
         </div>
       </div>
     );
   }
 }
-
-
-class Timer extends React.Component {
-  render() {
-    return (
-      <div>{this.state.remainingSeconds}</div>
-    );
-  }
-}
-
 
 export default App;

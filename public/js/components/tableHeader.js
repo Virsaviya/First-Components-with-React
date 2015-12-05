@@ -1,16 +1,15 @@
 import React from "react";
-import data from "../data";
+// import data from "../data";
 
 
-let headers = Object.keys(data[0][0])
-console.log('table keys from TableHeader ', headers);
-
-headers = headers.map( key => { 
-  return <th> {key} </th>
-})
+// let headers;
 
 class TableHeader extends React.Component {
   render() {
+    let headers = Object.keys(this.props.data[0]);
+    headers = headers.map( key => { 
+      return <th> {key} </th>
+    })
     return (
       <thead>
         <tr>
@@ -18,10 +17,6 @@ class TableHeader extends React.Component {
         </tr>
       </thead>
     );
-  }
-  
-  componentDidMount() {
-    console.log('header props ', this.props)
   }
 }
 

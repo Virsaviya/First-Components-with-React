@@ -1,33 +1,24 @@
 import React from "react";
-import data from "../data";
+// import data from "../data";
 
-console.log('data from TableBody ', data);
+// console.log('data from TableBody ', data);
 
 
 class TableBody extends React.Component {
   render() {
+    let keys = Object.keys(this.props.data[0]);
+    let rows = this.props.data;
+    rows = rows.map( row => {
+      let values = keys.map( key => {
+        return <td> {row[key]} </td>
+      });
+      return <tr> {values} </tr>
+    });
     return (
       <tbody>
-        <tr>
-          <td>val 1</td>
-          <td>val 2</td>
-          <td>val 3</td>
-        </tr>
-        <tr>
-          <td>updated val 1</td>
-          <td>updated val 2</td>
-          <td>updated val 3</td>
-        </tr>
-        <tr>
-          <td>val 1</td>
-          <td>val 2</td>
-          <td>val 3</td>
-        </tr>
+        {rows}
       </tbody>
     );
-  }
-  componentDidMount() {
-    console.log('body props ', this.props)
   }
 }
 

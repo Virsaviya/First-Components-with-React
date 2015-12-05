@@ -61,11 +61,9 @@
 	
 	var _app2 = _interopRequireDefault(_app);
 	
-	var _data = __webpack_require__(/*! ./data */ 160);
-	
-	var _data2 = _interopRequireDefault(_data);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	// import data from "./data";
 	
 	_reactDom2.default.render(_react2.default.createElement(_app2.default, null), document.getElementById('react'));
 
@@ -20221,15 +20219,28 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
+	var tables = _data2.default;
+	tables = tables.map(function (table, idx) {
+	  return _react2.default.createElement(
+	    "div",
+	    null,
+	    _react2.default.createElement(
+	      "h3",
+	      null,
+	      "Table ",
+	      idx + 1
+	    ),
+	    _react2.default.createElement(_table2.default, { key: idx, data: table })
+	  );
+	});
+	
 	var App = (function (_React$Component) {
 	  _inherits(App, _React$Component);
 	
-	  function App(props) {
+	  function App() {
 	    _classCallCheck(this, App);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
-	    // this.props.data = data;
-	    // console.log('data from your apppp ', this.props.data);
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(App).apply(this, arguments));
 	  }
 	
 	  _createClass(App, [{
@@ -20246,36 +20257,13 @@
 	            null,
 	            "Dynamically Building Tables with React.js"
 	          ),
-	          _react2.default.createElement(_table2.default, { data: _data2.default })
+	          tables
 	        )
 	      );
 	    }
 	  }]);
 	
 	  return App;
-	})(_react2.default.Component);
-	
-	var Timer = (function (_React$Component2) {
-	  _inherits(Timer, _React$Component2);
-	
-	  function Timer() {
-	    _classCallCheck(this, Timer);
-	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Timer).apply(this, arguments));
-	  }
-	
-	  _createClass(Timer, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        this.state.remainingSeconds
-	      );
-	    }
-	  }]);
-	
-	  return Timer;
 	})(_react2.default.Component);
 	
 	exports.default = App;
@@ -20292,7 +20280,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	var data = [[{ "domain": "mongodb.info", "ip": "82.192.74.35", "country": "NL" }, { "domain": "udemy.com", "ip": "190.93.242.22", "country": "CR" }, { "domain": "coursereport.com", "ip": "204.236.232.83", "country": "US" }], [{ "rank": 1, "name": "China", "population": 1373420000, "percent": 18.9 }, { "rank": 2, "name": "India", "population": 1280670000, "percent": 17.6 }, { "rank": 3, "name": "United States", "population": 322317000, "percent": 4.42 }, { "rank": 4, "name": "Indonesia", "population": 255461700, "percent": 3.51 }, { "rank": 5, "name": "Brazil", "population": 205252000, "percent": 2.82 }]];
+	var data = [[{ "domain": "mongodb.info", "ip": "82.192.74.35", "country": "NL" }, { "domain": "udemy.com", "ip": "190.93.242.22", "country": "CR" }, { "domain": "coursereport.com", "ip": "204.236.232.83", "country": "US" }], [{ "rank": 1, "name": "China", "population": 1373420000, "percent": 18.9 }, { "rank": 2, "name": "India", "population": 1280670000, "percent": 17.6 }, { "rank": 3, "name": "United States", "population": 322317000, "percent": 4.42 }, { "rank": 4, "name": "Indonesia", "population": 255461700, "percent": 3.51 }, { "rank": 5, "name": "Brazil", "population": 205252000, "percent": 2.82 }], [{ "framework": "React.js", "awesome": "true", "efficient": "true", "easy": "sorta", "comments": "excitement!" }, { "framework": "Angular.js", "awesome": "false", "efficient": "truethy", "easy": "no", "comments": "fuck Angular" }, { "framework": "jQuery.js", "awesome": "meh", "efficient": "false", "easy": "truethy", "comments": "dull and slow" }]];
 	
 	exports.default = data;
 
@@ -20331,6 +20319,10 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
+	// headers = headers.map( key => {
+	//   return <th> {key} </th>
+	// })
+	
 	// let headers = Object.keys(data[0][0])
 	// console.log('table keys from TableHeader ', headers);
 	
@@ -20353,15 +20345,10 @@
 	          "div",
 	          { className: "col-md-12" },
 	          _react2.default.createElement(
-	            "h3",
-	            null,
-	            "Taaaaable"
-	          ),
-	          _react2.default.createElement(
 	            "table",
 	            { className: "table table-striped table-hover" },
-	            _react2.default.createElement(_tableHeader2.default, null),
-	            _react2.default.createElement(_tableBody2.default, null)
+	            _react2.default.createElement(_tableHeader2.default, { data: this.props.data }),
+	            _react2.default.createElement(_tableBody2.default, { data: this.props.data })
 	          )
 	        )
 	      );
@@ -20369,7 +20356,7 @@
 	  }, {
 	    key: "componentDidMount",
 	    value: function componentDidMount() {
-	      console.log('table props ', this.props);
+	      // console.log('table props ', this.props.data)
 	    }
 	  }]);
 	
@@ -20397,10 +20384,6 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _data = __webpack_require__(/*! ../data */ 160);
-	
-	var _data2 = _interopRequireDefault(_data);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20409,18 +20392,9 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var headers = Object.keys(_data2.default[0][0]);
-	console.log('table keys from TableHeader ', headers);
+	// import data from "../data";
 	
-	headers = headers.map(function (key) {
-	  return _react2.default.createElement(
-	    "th",
-	    null,
-	    " ",
-	    key,
-	    " "
-	  );
-	});
+	// let headers;
 	
 	var TableHeader = (function (_React$Component) {
 	  _inherits(TableHeader, _React$Component);
@@ -20434,6 +20408,16 @@
 	  _createClass(TableHeader, [{
 	    key: "render",
 	    value: function render() {
+	      var headers = Object.keys(this.props.data[0]);
+	      headers = headers.map(function (key) {
+	        return _react2.default.createElement(
+	          "th",
+	          null,
+	          " ",
+	          key,
+	          " "
+	        );
+	      });
 	      return _react2.default.createElement(
 	        "thead",
 	        null,
@@ -20443,11 +20427,6 @@
 	          headers
 	        )
 	      );
-	    }
-	  }, {
-	    key: "componentDidMount",
-	    value: function componentDidMount() {
-	      console.log('header props ', this.props);
 	    }
 	  }]);
 	
@@ -20489,10 +20468,6 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _data = __webpack_require__(/*! ../data */ 160);
-	
-	var _data2 = _interopRequireDefault(_data);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20501,7 +20476,9 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	console.log('data from TableBody ', _data2.default);
+	// import data from "../data";
+	
+	// console.log('data from TableBody ', data);
 	
 	var TableBody = (function (_React$Component) {
 	  _inherits(TableBody, _React$Component);
@@ -20515,72 +20492,31 @@
 	  _createClass(TableBody, [{
 	    key: "render",
 	    value: function render() {
+	      var keys = Object.keys(this.props.data[0]);
+	      var rows = this.props.data;
+	      rows = rows.map(function (row) {
+	        var values = keys.map(function (key) {
+	          return _react2.default.createElement(
+	            "td",
+	            null,
+	            " ",
+	            row[key],
+	            " "
+	          );
+	        });
+	        return _react2.default.createElement(
+	          "tr",
+	          null,
+	          " ",
+	          values,
+	          " "
+	        );
+	      });
 	      return _react2.default.createElement(
 	        "tbody",
 	        null,
-	        _react2.default.createElement(
-	          "tr",
-	          null,
-	          _react2.default.createElement(
-	            "td",
-	            null,
-	            "val 1"
-	          ),
-	          _react2.default.createElement(
-	            "td",
-	            null,
-	            "val 2"
-	          ),
-	          _react2.default.createElement(
-	            "td",
-	            null,
-	            "val 3"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "tr",
-	          null,
-	          _react2.default.createElement(
-	            "td",
-	            null,
-	            "updated val 1"
-	          ),
-	          _react2.default.createElement(
-	            "td",
-	            null,
-	            "updated val 2"
-	          ),
-	          _react2.default.createElement(
-	            "td",
-	            null,
-	            "updated val 3"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "tr",
-	          null,
-	          _react2.default.createElement(
-	            "td",
-	            null,
-	            "val 1"
-	          ),
-	          _react2.default.createElement(
-	            "td",
-	            null,
-	            "val 2"
-	          ),
-	          _react2.default.createElement(
-	            "td",
-	            null,
-	            "val 3"
-	          )
-	        )
+	        rows
 	      );
-	    }
-	  }, {
-	    key: "componentDidMount",
-	    value: function componentDidMount() {
-	      console.log('body props ', this.props);
 	    }
 	  }]);
 	

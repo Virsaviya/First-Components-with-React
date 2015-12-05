@@ -10,6 +10,11 @@ var data = [
     {"rank":3,"name":"United States","population":322317000,"percent":4.42},
     {"rank":4,"name":"Indonesia","population":255461700,"percent":3.51},
     {"rank":5,"name":"Brazil","population":205252000,"percent":2.82}
+  ],
+  [
+    {"framework": "React.js", "awesome": "true", "efficient": "true", "easy": "sorta", "comments": "excitement!"},
+    {"framework": "Angular.js", "awesome": "false", "efficient": "truethy", "easy": "false", "comments": "fuck Angular"}, 
+    {"framework": "jQuery.js", "awesome": "meh", "efficient": "false", "easy": "truethy", "comments": "dull and slow"}
   ]
 ];
 

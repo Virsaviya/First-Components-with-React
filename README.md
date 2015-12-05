@@ -1,7 +1,6 @@
 #__Reacting to React.js: First Forrays into the Wild__
 
-_created by Virsaviya Efraim_
-
+_created by Virsaviya Efraim_  
 _updated: December 4, 2015_
 
 ###__Assignment:__

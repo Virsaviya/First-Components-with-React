@@ -21,9 +21,9 @@ App Component:
   {"domain":"mongodb.info","ip":"82.192.74.35","country":"NL"},
   {"domain":"udemy.com","ip":"190.93.242.22","country":"CR"},  
   {"domain":"coursereport.com","ip":"204.236.232.83","country":"US"}}
-];`
+];
 
-`let data2 = [
+let data2 = [
    {"rank":1,"name":"China","population":1373420000,"percent":18.9},
    {"rank":2,"name":"India","population":1280670000,"percent":17.6},
    {"rank":3,"name":"United States","population":322317000,"percent":4.42},

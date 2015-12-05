@@ -4,17 +4,17 @@ import Table from "./table";
 
 
 let tables = data
-tables = tables.map( (table, idx) => { 
-  return (
-    <div>
-      <h3>Table {idx + 1}</h3>
-      <Table key={idx} data={table}/>
-    </div>
-  )
-})
 
 class App extends React.Component {
   render() {
+    tables = tables.map( (table, idx) => { 
+      return (
+        <div key={idx}>
+          <h3>Table {idx + 1}</h3>
+          <Table data={table}/>
+        </div>
+      )
+    })
     return (
       <div className="row">
         <div className="col-md-12">
@@ -25,5 +25,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;

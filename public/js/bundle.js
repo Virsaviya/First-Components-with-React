@@ -20220,19 +20220,6 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var tables = _data2.default;
-	tables = tables.map(function (table, idx) {
-	  return _react2.default.createElement(
-	    "div",
-	    null,
-	    _react2.default.createElement(
-	      "h3",
-	      null,
-	      "Table ",
-	      idx + 1
-	    ),
-	    _react2.default.createElement(_table2.default, { key: idx, data: table })
-	  );
-	});
 	
 	var App = (function (_React$Component) {
 	  _inherits(App, _React$Component);
@@ -20246,6 +20233,19 @@
 	  _createClass(App, [{
 	    key: "render",
 	    value: function render() {
+	      tables = tables.map(function (table, idx) {
+	        return _react2.default.createElement(
+	          "div",
+	          { key: idx },
+	          _react2.default.createElement(
+	            "h3",
+	            null,
+	            "Table ",
+	            idx + 1
+	          ),
+	          _react2.default.createElement(_table2.default, { data: table })
+	        );
+	      });
 	      return _react2.default.createElement(
 	        "div",
 	        { className: "row" },
@@ -20280,7 +20280,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	var data = [[{ "domain": "mongodb.info", "ip": "82.192.74.35", "country": "NL" }, { "domain": "udemy.com", "ip": "190.93.242.22", "country": "CR" }, { "domain": "coursereport.com", "ip": "204.236.232.83", "country": "US" }], [{ "rank": 1, "name": "China", "population": 1373420000, "percent": 18.9 }, { "rank": 2, "name": "India", "population": 1280670000, "percent": 17.6 }, { "rank": 3, "name": "United States", "population": 322317000, "percent": 4.42 }, { "rank": 4, "name": "Indonesia", "population": 255461700, "percent": 3.51 }, { "rank": 5, "name": "Brazil", "population": 205252000, "percent": 2.82 }], [{ "framework": "React.js", "awesome": "true", "efficient": "true", "easy": "sorta", "comments": "excitement!" }, { "framework": "Angular.js", "awesome": "false", "efficient": "truethy", "easy": "no", "comments": "fuck Angular" }, { "framework": "jQuery.js", "awesome": "meh", "efficient": "false", "easy": "truethy", "comments": "dull and slow" }]];
+	var data = [[{ "domain": "mongodb.info", "ip": "82.192.74.35", "country": "NL" }, { "domain": "udemy.com", "ip": "190.93.242.22", "country": "CR" }, { "domain": "coursereport.com", "ip": "204.236.232.83", "country": "US" }], [{ "rank": 1, "name": "China", "population": 1373420000, "percent": 18.9 }, { "rank": 2, "name": "India", "population": 1280670000, "percent": 17.6 }, { "rank": 3, "name": "United States", "population": 322317000, "percent": 4.42 }, { "rank": 4, "name": "Indonesia", "population": 255461700, "percent": 3.51 }, { "rank": 5, "name": "Brazil", "population": 205252000, "percent": 2.82 }], [{ "framework": "React.js", "awesome?": "true", "efficient?": "true", "easy": "sorta", "comments": "excitement!" }, { "framework": "Angular.js", "awesome?": "false", "efficient?": "truethy", "easy": "false", "comments": "fuck Angular" }, { "framework": "jQuery.js", "awesome?": "meh", "efficient?": "false", "easy": "truethy", "comments": "dull and slow" }]];
 	
 	exports.default = data;
 
@@ -20356,7 +20356,7 @@
 	  }, {
 	    key: "componentDidMount",
 	    value: function componentDidMount() {
-	      // console.log('table props ', this.props.data)
+	      console.log('table props ', this.props.data);
 	    }
 	  }]);
 	
@@ -20409,10 +20409,10 @@
 	    key: "render",
 	    value: function render() {
 	      var headers = Object.keys(this.props.data[0]);
-	      headers = headers.map(function (key) {
+	      headers = headers.map(function (key, idx) {
 	        return _react2.default.createElement(
 	          "th",
-	          null,
+	          { key: idx },
 	          " ",
 	          key,
 	          " "
@@ -20494,11 +20494,11 @@
 	    value: function render() {
 	      var keys = Object.keys(this.props.data[0]);
 	      var rows = this.props.data;
-	      rows = rows.map(function (row) {
-	        var values = keys.map(function (key) {
+	      rows = rows.map(function (row, idx) {
+	        var values = keys.map(function (key, idx) {
 	          return _react2.default.createElement(
 	            "td",
-	            null,
+	            { key: idx },
 	            " ",
 	            row[key],
 	            " "
@@ -20506,7 +20506,7 @@
 	        });
 	        return _react2.default.createElement(
 	          "tr",
-	          null,
+	          { key: idx },
 	          " ",
 	          values,
 	          " "

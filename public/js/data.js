@@ -12,9 +12,9 @@ var data = [
     {"rank":5,"name":"Brazil","population":205252000,"percent":2.82}
   ],
   [
-    {"framework": "React.js", "awesome": "true", "efficient": "true", "easy": "sorta", "comments": "excitement!"},
-    {"framework": "Angular.js", "awesome": "false", "efficient": "truethy", "easy": "false", "comments": "fuck Angular"}, 
-    {"framework": "jQuery.js", "awesome": "meh", "efficient": "false", "easy": "truethy", "comments": "dull and slow"}
+    {"framework": "React.js", "awesome?": "true", "efficient?": "true", "easy": "sorta", "comments": "excitement!"},
+    {"framework": "Angular.js", "awesome?": "false", "efficient?": "truethy", "easy": "false", "comments": "fuck Angular"}, 
+    {"framework": "jQuery.js", "awesome?": "meh", "efficient?": "false", "easy": "truethy", "comments": "dull and slow"}
   ]
 ];
 

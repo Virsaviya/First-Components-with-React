@@ -23,7 +23,7 @@ class Table extends React.Component {
     );
   }
   componentDidMount() {
-    // console.log('table props ', this.props.data)
+    console.log('table props ', this.props.data)
   }
 }
 

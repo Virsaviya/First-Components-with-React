@@ -10,6 +10,7 @@ class TableBody extends React.Component {
     let rows = this.props.data;
     rows = rows.map( (row, idx) => {
       let values = keys.map( (key, idx) => {
+        console.log('key', key)
         return <td key={idx}> {row[key]} </td>
       });
       return <tr key={idx}> {values} </tr>

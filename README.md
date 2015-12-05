@@ -26,3 +26,8 @@ Work on any object, here's a skeleton that you should make work:
        {"rank":4,"name":"Indonesia","population":255461700,"percent":3.51},
        {"rank":5,"name":"Brazil","population":205252000,"percent":2.82}}
     ];
+    let data1 = [
+      {"domain":"mongodb.info","ip":"82.192.74.35","country":"NL"},
+      {"domain":"udemy.com","ip":"190.93.242.22","country":"CR"},  
+      {"domain":"coursereport.com","ip":"204.236.232.83","country":"US"}}
+    ];

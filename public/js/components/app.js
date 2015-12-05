@@ -18,7 +18,7 @@ class App extends React.Component {
     return (
       <div className="row">
         <div className="col-md-12">
-        <h2>Dynamically Building Tables with React.js</h2>
+        <h2>Dynamically Generated Tables with React.js</h2>
         {tables}
         </div>
       </div>

@@ -20255,7 +20255,7 @@
 	          _react2.default.createElement(
 	            "h2",
 	            null,
-	            "Dynamically Building Tables with React.js"
+	            "Dynamically Generated Tables with React.js"
 	          ),
 	          tables
 	        )

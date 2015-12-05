@@ -17,6 +17,7 @@ App Component:
 * Render same table Component with prop data=data2
 * Work on any object, here's a skeleton that you should make work:
 
+
     let data1 = [
       {"domain":"mongodb.info","ip":"82.192.74.35","country":"NL"},
       {"domain":"udemy.com","ip":"190.93.242.22","country":"CR"},  

@@ -14,8 +14,8 @@ var data = [
   [
     {"framework": "React.js", "awesome?": "true", "efficient?": "true", "easy?": "sorta", "comments": "excitement!"},
     {"framework": "Angular.js", "awesome?": "false", "efficient?": "truethy", "easy?": "false", "comments": "fuck Angular"}, 
-    {"framework": "jQuery.js", "awesome?": "meh", "efficient?": "false", "easy?": "truethy", "comments": "dull and slow"}
-  ]
+    {"framework": "jQuery.js", "awesome?": "sucks", "efficient?": "false", "easy?": "meh", "comments": "dull and slow"}
+  ],
 ];
 
 export default data;

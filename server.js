@@ -6,4 +6,4 @@ var app = express();
 
 app.use(express.static('public'));
 
-app.listen(8000b);
+app.listen(8000);

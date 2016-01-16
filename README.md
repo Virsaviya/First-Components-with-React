@@ -1,7 +1,7 @@
 #__[First Forrays into the Wild: Reacting to React.js](https://react-table-4570.herokuapp.com/)__
 
 _created by Virsaviya Efraim_  
-_updated: December 4, 2015_
+_updated: January 15, 2016_
 
 ###__Assignment:__
 

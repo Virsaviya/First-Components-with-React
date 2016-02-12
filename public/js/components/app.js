@@ -1,9 +1,6 @@
 import React from "react";
-import data from "../data/data";
+import tables from "../data/data";
 import Table from "./table";
-
-console.log(data)
-let tables = data
 
 class App extends React.Component {
   render() {
